@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Italiana - Descubra a Itália</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Descubra a Itália</h1>
+        <div class="menu-icon">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cultura.html">Cultura</a></li>
+                <li><a href="gastronomia.html">Gastronomia</a></li>
+                <li><a href="turismo.html">Turismo</a></li>
+                <li><a href="info.html">Informações Gerais</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Cultura Italiana</h2>
+        <img src="./Img/coliseu-as-noite-roma-italia.jpeg" alt="Coliseu em Roma" class="hero-image">
+        
+        <section>
+            <h3>Arte e História</h3>
+            <p>A Itália é berço de algumas das maiores obras de arte e arquitetura do mundo. Do Renascimento ao Barroco, o país produziu mestres como Leonardo da Vinci, Michelangelo e Botticelli.</p>
+            <ul>
+                <li>Visite os Museus do Vaticano para ver a Capela Sistina</li>
+                <li>Explore as ruínas romanas, incluindo o Coliseu e o Fórum Romano</li>
+                <li>Admire as obras-primas na Galleria degli Uffizi em Florença</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Música e Cinema</h3>
+            <p>A Itália tem uma rica tradição musical, da ópera à música popular moderna. O cinema italiano também é reconhecido mundialmente, com diretores como Federico Fellini e Sergio Leone.</p>
+        </section>
+
+        <section>
+            <h3>Moda e Design</h3>
+            <p>A Itália é sinônimo de estilo, com marcas famosas como Gucci, Prada e Armani. O design italiano, de móveis a carros, é conhecido por sua elegância e inovação.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Descubra a Itália. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const nav = document.querySelector('nav');
+        
+            menuIcon.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                menuIcon.innerHTML = nav.classList.contains('active') ? '&times;' : '&#9776;';
+            });
+        
+            // Fechar o menu ao clicar em um link
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    nav.classList.remove('active');
+                    menuIcon.innerHTML = '&#9776;';
+                });
+            });
+        });
+        </script>
+</body>
+</html>

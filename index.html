@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Descubra a Itália</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Descubra a Itália</h1>
+            <div class="menu-icon">&#9776;</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cultura.html">Cultura</a></li>
+                    <li><a href="gastronomia.html">Gastronomia</a></li>
+                    <li><a href="turismo.html">Turismo</a></li>
+                    <li><a href="info.html">Informações Gerais</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Bem-vindo à Itália</h2>
+            <img src="./Img/vista-panoramic.jpg" alt="Vista panorâmica de Roma" class="hero-image">
+            <p>Explore a rica história, cultura fascinante e paisagens deslumbrantes da Itália. De Roma a Veneza, de Florença a Nápoles, descubra um país que cativa corações há milênios.</p>
+            <section class="quick-links">
+                <h3>Explore mais:</h3>
+                <ul>
+                    <li><a href="cultura.html">Cultura Italiana</a></li>
+                    <li><a href="gastronomia.html">Gastronomia Deliciosa</a></li>
+                    <li><a href="turismo.html">Pontos Turísticos Imperdíveis</a></li>
+                    <li><a href="info.html">Informações Essenciais</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Descubra a Itália. Todos os direitos reservados.</p>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuIcon = document.querySelector('.menu-icon');
+                const nav = document.querySelector('nav');
+            
+                menuIcon.addEventListener('click', function() {
+                    nav.classList.toggle('active');
+                    menuIcon.innerHTML = nav.classList.contains('active') ? '&times;' : '&#9776;';
+                });
+            
+                // Fechar o menu ao clicar em um link
+                const navLinks = document.querySelectorAll('nav ul li a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        nav.classList.remove('active');
+                        menuIcon.innerHTML = '&#9776;';
+                    });
+                });
+            });
+            </script>
+    </body>
+</html>

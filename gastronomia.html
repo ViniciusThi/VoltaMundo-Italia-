@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomia Italiana - Descubra a Itália</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Descubra a Itália</h1>
+        <div class="menu-icon">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cultura.html">Cultura</a></li>
+                <li><a href="gastronomia.html">Gastronomia</a></li>
+                <li><a href="turismo.html">Turismo</a></li>
+                <li><a href="info.html">Informações Gerais</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Gastronomia Italiana</h2>
+        <img src="./Img/delivery-comida-italiana.webp" alt="Prato de massa italiana" class="hero-image">
+        
+        <section>
+            <h3>Pratos Típicos</h3>
+            <p>A culinária italiana é famosa mundialmente por sua simplicidade e sabor. Cada região tem suas especialidades únicas.</p>
+            <ul>
+                <li>Pizza Napolitana</li>
+                <li>Pasta al Dente</li>
+                <li>Risotto alla Milanese</li>
+                <li>Osso Buco</li>
+                <li>Tiramisù</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Vinhos Italianos</h3>
+            <p>A Itália é um dos maiores produtores de vinho do mundo, com uma grande variedade de uvas e estilos.</p>
+            <table>
+                <tr>
+                    <th>Região</th>
+                    <th>Vinho Famoso</th>
+                </tr>
+                <tr>
+                    <td>Toscana</td>
+                    <td>Chianti</td>
+                </tr>
+                <tr>
+                    <td>Piemonte</td>
+                    <td>Barolo</td>
+                </tr>
+                <tr>
+                    <td>Vêneto</td>
+                    <td>Prosecco</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Descubra a Itália. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const nav = document.querySelector('nav');
+        
+            menuIcon.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                menuIcon.innerHTML = nav.classList.contains('active') ? '&times;' : '&#9776;';
+            });
+        
+            // Fechar o menu ao clicar em um link
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    nav.classList.remove('active');
+                    menuIcon.innerHTML = '&#9776;';
+                });
+            });
+        });
+        </script>
+</body>
+</html>

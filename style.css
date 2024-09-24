@@ -1,0 +1,334 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de cores */
+:root {
+    --color-primary: #009246;
+    --color-secondary: #CE2B37;
+    --color-white: #ffffff;
+    --color-black: #333333;
+    --color-grey: #f4f4f4;
+}
+
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+/* Header */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(0, 146, 70, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-secondary);
+}
+
+/* Main content */
+main {
+    padding-top: 150px; /* Ajustado para dar espaço ao header fixo */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-secondary);
+    margin-bottom: 2rem; /* Aumentado para mais espaço */
+    font-size: 2.2rem;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    display: block;
+    margin: 2rem auto; /* Aumentado para mais espaço */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+}
+
+/* Seções */
+.section {
+    margin-bottom: 4rem; /* Aumentado para mais espaço entre seções */
+    padding: 2rem;
+    background-color: var(--color-grey);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+/* Espaçamento adicional para parágrafos dentro das seções */
+.section p {
+    margin-bottom: 1.5rem;
+}
+
+/* Quick links */
+.quick-links {
+    background-color: var(--color-white);
+    padding: 2rem;
+    margin-top: 3rem; /* Aumentado para mais espaço */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quick-links h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.5rem; /* Aumentado para mais espaço */
+    color: var(--color-primary);
+}
+
+.quick-links ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem; /* Aumentado para mais espaço */
+}
+
+.quick-links ul li {
+    margin-bottom: 1rem; /* Aumentado para mais espaço */
+}
+
+.quick-links ul li a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 0.8rem; /* Aumentado para mais espaço */
+    border-radius: 5px;
+    background-color: var(--color-grey);
+}
+
+.quick-links ul li a:hover {
+    color: var(--color-white);
+    background-color: var(--color-secondary);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem; /* Aumentado para mais espaço */
+}
+
+h3{
+    margin-top: 20px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.section, .quick-links {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 1rem 0.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    main {
+        padding-top: 180px; /* Ajustado para dar mais espaço em dispositivos móveis */
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-image {
+        height: 30vh;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+
+    main {
+        padding-top: 180px; /* Ajustado para dar mais espaço em telas grandes */
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .hero-image {
+        height: 60vh;
+    }
+}
+
+/* Elementos interativos adicionais */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem; /* Aumentado para mais espaço */
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    margin-top: 2rem; /* Aumentado para mais espaço */
+}
+
+.cta-button:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.interactive-map {
+    width: 100%;
+    height: 400px;
+    background-color: var(--color-grey);
+    border-radius: 10px;
+    margin: 3rem 0; /* Aumentado para mais espaço */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--color-black);
+    transition: all 0.3s ease;
+}
+
+.interactive-map:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+
+/* ... (mantenha os estilos anteriores) ... */
+
+/* Estilos para o menu de hambúrguer */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-primary);
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    nav ul li {
+        margin: 1.5rem 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+        padding-right: 3rem; /* Espaço para o ícone do menu */
+    }
+
+    main {
+        padding-top: 100px; /* Ajustado para o novo tamanho do header */
+    }
+}
+
+/* ... (mantenha os estilos restantes) ... */

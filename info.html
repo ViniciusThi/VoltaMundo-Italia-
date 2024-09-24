@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações Gerais - Descubra a Itália</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Descubra a Itália</h1>
+        <div class="menu-icon">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cultura.html">Cultura</a></li>
+                <li><a href="gastronomia.html">Gastronomia</a></li>
+                <li><a href="turismo.html">Turismo</a></li>
+                <li><a href="info.html">Informações Gerais</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Informações Gerais sobre a Itália</h2>
+        <img src="./Img/bandeira.avif" alt="Bandeira da Itália" class="hero-image">
+        
+        <section>
+            <h3>Dados Básicos</h3>
+            <ul>
+                <li>Capital: Roma</li>
+                <li>Idioma oficial: Italiano</li>
+                <li>População: Aproximadamente 60 milhões de habitantes</li>
+                <li>Área: 301.340 km²</li>
+                <li>Moeda: Euro (€)</li>
+                <li>Governo: República parlamentarista</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Geografia</h3>
+            <p>A Itália é uma península em forma de bota, localizada no sul da Europa. O país é conhecido por sua diversidade geográfica, que inclui:</p>
+            <ul>
+                <li>Os Alpes no norte</li>
+                <li>Planícies férteis como a Planície Padana</li>
+                <li>Costas extensas ao longo do Mar Mediterrâneo</li>
+                <li>Ilhas como a Sicília e a Sardenha</li>
+                <li>Vulcões ativos como o Etna e o Vesúvio</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Clima</h3>
+            <p>A Itália possui um clima predominantemente mediterrâneo, caracterizado por:</p>
+            <ul>
+                <li>Verões quentes e secos</li>
+                <li>Invernos amenos e úmidos</li>
+                <li>Variações climáticas entre o norte (mais frio) e o sul (mais quente)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Economia</h3>
+            <p>A Itália é uma das maiores economias da União Europeia e do mundo. Seus principais setores incluem:</p>
+            <ul>
+                <li>Turismo</li>
+                <li>Moda e design</li>
+                <li>Indústria automobilística</li>
+                <li>Agricultura (especialmente vinhos e azeite)</li>
+                <li>Tecnologia e inovação</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Curiosidades</h3>
+            <ol>
+                <li>A Itália tem o maior número de Patrimônios Mundiais da UNESCO (58 no total).</li>
+                <li>O Vaticano, localizado em Roma, é o menor país independente do mundo.</li>
+                <li>A Universidade de Bolonha, fundada em 1088, é considerada a universidade mais antiga do mundo ocidental.</li>
+                <li>A Itália tem mais de 1500 lagos, com o Lago de Garda sendo o maior.</li>
+                <li>O italiano moderno é derivado do dialeto toscano, popularizado por escritores como Dante Alighieri.</li>
+                <li>A Ferrari, uma das marcas de carros mais famosas do mundo, foi fundada em Maranello, Itália.</li>
+                <li>A Itália é o maior produtor de vinho do mundo em volume.</li>
+                <li>O violino foi inventado na Itália no século XVI.</li>
+                <li>A cidade de Veneza é construída sobre 118 pequenas ilhas conectadas por pontes.</li>
+                <li>A Torre de Pisa começou a inclinar durante sua construção devido ao solo macio de um lado da fundação.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Feriados Nacionais</h3>
+            <table>
+                <tr>
+                    <th>Data</th>
+                    <th>Feriado</th>
+                </tr>
+                <tr>
+                    <td>1 de janeiro</td>
+                    <td>Ano Novo</td>
+                </tr>
+                <tr>
+                    <td>6 de janeiro</td>
+                    <td>Epifania</td>
+                </tr>
+                <tr>
+                    <td>25 de abril</td>
+                    <td>Dia da Libertação</td>
+                </tr>
+                <tr>
+                    <td>1 de maio</td>
+                    <td>Dia do Trabalho</td>
+                </tr>
+                <tr>
+                    <td>2 de junho</td>
+                    <td>Dia da República</td>
+                </tr>
+                <tr>
+                    <td>15 de agosto</td>
+                    <td>Ferragosto (Assunção de Maria)</td>
+                </tr>
+                <tr>
+                    <td>1 de novembro</td>
+                    <td>Dia de Todos os Santos</td>
+                </tr>
+                <tr>
+                    <td>8 de dezembro</td>
+                    <td>Imaculada Conceição</td>
+                </tr>
+                <tr>
+                    <td>25 de dezembro</td>
+                    <td>Natal</td>
+                </tr>
+                <tr>
+                    <td>26 de dezembro</td>
+                    <td>Santo Estêvão</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Descubra a Itália. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const nav = document.querySelector('nav');
+        
+            menuIcon.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                menuIcon.innerHTML = nav.classList.contains('active') ? '&times;' : '&#9776;';
+            });
+        
+            // Fechar o menu ao clicar em um link
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    nav.classList.remove('active');
+                    menuIcon.innerHTML = '&#9776;';
+                });
+            });
+        });
+        </script>
+</body>
+</html>

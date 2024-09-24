@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo na Itália - Descubra a Itália</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Descubra a Itália</h1>
+        <div class="menu-icon">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cultura.html">Cultura</a></li>
+                <li><a href="gastronomia.html">Gastronomia</a></li>
+                <li><a href="turismo.html">Turismo</a></li>
+                <li><a href="info.html">Informações Gerais</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Turismo na Itália</h2>
+        <img src="./Img/melhores-lugares-para-se-hospedar-em-veneza-1.webp" alt="Canais de Veneza" class="hero-image">
+        
+        <section>
+            <h3>Principais Destinos</h3>
+            <ul>
+                <li>Roma: Coliseu, Fórum Romano, Vaticano</li>
+                <li>Florença: Galleria degli Uffizi, Duomo, Ponte Vecchio</li>
+                <li>Veneza: Praça São Marcos, Ponte Rialto, passeios de gôndola</li>
+                <li>Milão: Duomo di Milano, Galeria Vittorio Emanuele II</li>
+                <li>Costa Amalfitana: Positano, Amalfi, Ravello</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Dicas de Viagem</h3>
+            <p>Para aproveitar ao máximo sua viagem à Itália:</p>
+            <ol>
+                <li>Aprenda algumas frases básicas em italiano</li>
+                <li>Compre ingressos para atrações populares com antecedência</li>
+                <li>Experimente a culinária local em trattorias autênticas</li>
+                <li>Respeite os costumes locais, especialmente ao visitar igrejas</li>
+                <li>Utilize o transporte público para economizar e ver mais da cidade</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Descubra a Itália. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const nav = document.querySelector('nav');
+        
+            menuIcon.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                menuIcon.innerHTML = nav.classList.contains('active') ? '&times;' : '&#9776;';
+            });
+        
+            // Fechar o menu ao clicar em um link
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    nav.classList.remove('active');
+                    menuIcon.innerHTML = '&#9776;';
+                });
+            });
+        });
+        </script>
+</body>
+</html>
